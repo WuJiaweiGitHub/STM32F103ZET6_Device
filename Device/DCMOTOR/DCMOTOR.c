@@ -40,6 +40,19 @@ void DCMOTOR_Init(void)
 	TIMxPWM_Init(&tim);
 }
 
+/**
+  * @brief  设置速度.
+  * @param  lr:  左侧或右侧电机 
+  *   This parameter can be one of the following values:
+  *     @arg left							: 左侧电机(IN1\IN2)
+  *     @arg right						: 右侧电机(IN3\IN4)
+  * @param  turn: 电机正转或反转.
+  *   This parameter can be one of the following values:
+  *     @arg Forward					: 正转
+  *     @arg Reverse					: 反转
+  * @param  en:  占空比大小值. 取值范围(0~1)
+  * @retval None
+  */
 void DCMOTOR_Drive(LR lr, Turn turn, double en)
 {
 	unsigned int temp = 0;
