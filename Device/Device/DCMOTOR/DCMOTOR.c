@@ -22,7 +22,10 @@ void DCMOTOR_Init(void)
 	
 	GPIO_InitStruct.GPIO_Pin = MOTOR_IN4_PIN;
 	GPIO_Init(MOTOR_IN4_PORT, &GPIO_InitStruct);
-		
+	
+//	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_4;
+//	GPIO_Init(GPIOB, &GPIO_InitStruct);
+	
 	tim.m_timx.TIMx = MOTOR_ENA_TIMx;
 	tim.m_timx.TIM_Arr = MOTOR_ENA_TIM_ARR;
 	tim.m_timx.TIM_Psc = MOTOR_ENA_TIM_PSC;
